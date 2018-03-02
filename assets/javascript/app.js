@@ -11,30 +11,16 @@
 $(document).ready( function() {
     
     //some global variables. can go back later and move these inside an object.
-    var timer = 30;
+    var timer = 31;
     var answered = false;
+    var intervalId;
 
-    $("#start").on("click", function() {
-        startGame();
-        //if user clicks on the correct answer change answered to true
-    })
-
-    //starts the game
-    function startGame() {
-        answered = false;
-        //start timer counting down from 30 seconds
-        setInterval(function() {
-            timer--
-        }, 1000);
-        //randomly select first question to dispaly with multiple choice answer options
-    }
-    
     var triviaQuestions = {
         q1: "Emma Watson is known for playing which character in Harry Potter?",
         q1Wrong1: "Snape",
         q1Wrong2: "Harry Potter",
         q1Wrong3: "Hedwig",
-        q1correct: "Hermione",
+        q1Correct: "Hermione",
     
         q2: "In what year was the first Harry Potter movie released?",
         q2Wrong1: "1997",
@@ -42,5 +28,47 @@ $(document).ready( function() {
         q2Wrong3: "2004",
         q2correct: "2001"
     }
+
+    $("#playGame").on("click", function() {
+        startGame();
+        //if user clicks on the correct answer change answered to true
+    })
+
+    //starts the game
+    function startGame() {
+        console.log("button clicked")
+        answered = false;
+        //set an interval to call the countDown function every 1 second
+        intervalId = setInterval(countDown, 1000);
+        //randomly select first question to display with multiple choice answer options
+        //show timer
+        $("#gameTimer").removeClass("hide");
+        //change header text to question text
+        $("#header").html("<h2>" + triviaQuestions.q1 + "</h2>")
+        //change color of header text and card background. Can do this by switching a class.
+        questionCard();
+        //hide button
+        $("#playGame").addClass("hide");
+        //change card text to multiple choice answers
+        $("#cardText").html("<p>" + triviaQuestions.q1Wrong1 + "</p><p>" + triviaQuestions.q1Wrong2 + "</p><p>" + triviaQuestions.q1Wrong3 + "</p><p>" + triviaQuestions.q1Correct + "</p>").addClass("multiple-choice");
+    }
+
+    //countDown function decreases timer by 1 and prints it to the DOM. When the timer gets to 0 it stops.
+    function countDown() {
+        timer--
+        $("#gameTimer").text(timer);
+        if( timer === 0) {
+            clearInterval(intervalId);
+        }
+    }
+
+    function questionCard() {
+        $("#card").removeClass("card-start")
+        $("#card").addClass("card-question")
+    }
+
+
+    
+    
 });
 

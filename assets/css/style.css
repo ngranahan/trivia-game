@@ -1,0 +1,93 @@
+body {
+    background-color: #444e4b;
+}
+
+h1 {
+    font-size: 4em;
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Bowlby One', cursive;
+}
+
+.playing-card {
+    height: 600px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
+    margin: 100px auto;
+    padding: 55px 40px;
+    position: relative;
+}
+
+.card-start {
+    background-color: #cce8e5;
+}
+
+.card-start h1 {
+    color: #3f9b80;
+    border-top: 2px solid #3f9b80;
+    border-bottom: 2px solid #3f9b80;
+}
+
+.card-question {
+ background-color: #e8e3cc;
+}
+
+.card-question h2 {
+    color: #f06540;
+    border-top: 2px solid #f06540;
+    border-bottom: 2px solid #f06540;
+    font-size: 2em;
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Bowlby One', cursive;
+}
+
+.multiple-choice p:hover {
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+p {
+    color: white;
+    font-size: 2em;
+    margin: 20px;
+}
+
+.btn-primary {
+    background: #3f9b80;
+    border-color: #3f9b80;
+    color: white;
+    font-family: 'Bowlby One', cursive;
+    font-size: 2em;
+    margin: 20px;
+
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    background-color: #346657; 
+}
+
+.btn-group-lg>.btn, .btn-lg:hover, .btn-group-lg>.btn, .btn-lg:active, .btn-group-lg>.btn, .btn-lg:focus {
+    background-color: #346657; 
+    border-color: #346657;
+}
+
+#gameTimer {
+    height: 100px;
+    width: 100px;
+    background-color: #f06540;
+    color: white;
+    font-family: 'Bowlby One', cursive;
+    position: absolute;
+    right: -150px;
+    top: -50px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 17px -1px rgba(0,0,0,0.75);
+    font-size: 3em;
+    padding: 20px;
+}
+
+.hide {
+    display: hidden;
+}
