@@ -47,7 +47,7 @@ h1 {
     color: #444e4b;
 }
 
-.multiple-choice p:hover {
+.true:hover, .false:hover {
     font-size: 2.5em;
     cursor: pointer;
 }
@@ -56,6 +56,12 @@ p {
     color: white;
     font-size: 2em;
     margin: 20px;
+}
+
+img {
+    width: 330px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
 .btn-primary {
