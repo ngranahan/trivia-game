@@ -43,6 +43,10 @@ h1 {
     font-family: 'Bowlby One', cursive;
 }
 
+.card-question p {
+    color: #444e4b;
+}
+
 .multiple-choice p:hover {
     font-size: 2.5em;
     cursor: pointer;
