@@ -1,14 +1,12 @@
 //when user clicks "start" button, set timer to count down starting at 30 seconds
 //display trivia question text to HTML div
-
 //display list of possible answers
 //when user selects an answer, display associated image
 //if user answer is correct, display "correct", wait a few seconds then move on to the next question
 //if user selects wront answer, display "wrong answer + correct answer: ...", wait a few seconds then advance to the next question
-
 //if timer reaches 0 and user hasn't selected an answer, display "game over" and prompt user to play again
-
 //create a for loop that will loop through each of the questions starting at a random index
+
 
 //If time allows, create randomization for multiple choice answers and question order.
 
@@ -55,6 +53,22 @@ $(document).ready(function () {
         c: "Asia",
         d: "Antarctica",
         img: "assets/images/antarctica.jpg"
+    },
+    {
+        question: "How many Olympic Games have been hosted in Africa?",
+        a: "2",
+        b: "1",
+        c: "6",
+        d: "0",
+        img: "assets/images/olympics.jpg"
+    },
+    {
+        question: "In the movie 'The Lion King', what was Simba's mother's name?",
+        a: "Nala",
+        b: "Simba's Mom",
+        c: "Jaffar",
+        d: "Sarabi",
+        img: "assets/images/lionking.jpg"
     }
     ];
 
